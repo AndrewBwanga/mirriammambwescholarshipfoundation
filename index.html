@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirriam Mambwe Scholarship Foundation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/Logo.jpg" alt="MMSF Logo" class="logo"> <!-- Replace with logo image -->
+        <ul class="nav-links">
+            <li class="active"><a href="#home">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#donation">DONATION</a></li>
+            <li class="ctn"><a href="#contacts">CONTACTS</a></li>
+        </ul>
+        <img src="images/2.jpeg" alt="" class="menu-btn">
+    </nav>
+    <header id="home">
+        <div class="header-content">
+            <p class="motto">IN THEIR HEART A DREAM LIVES, WITH OUR SUPPORT IT COMES ALIVE</p>
+            <a href="" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <!--Services-->
+    <section id="services" class="services">
+        <div class="title">
+            <h1>Services Offered</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/first.jpg" alt="">
+                <h4>Outreach</h4>
+                <p>We go to schools across the entire village including the ones on the island to speak to children on the importance of education accompanied by the ones that have successfully completed and are working in different parts of the country.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/second.jpg" alt="">
+                <h4>Support</h4>
+                <p>We provide school related materials for school going children starting from the age of 5 who are enrolled in pre-schools and we source for their scholarships to facilitate education.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/third.jpg" alt="">
+                <h4>Mentorship</h4>
+                <p>Providing guidance and mentorship to help students navigate their academic and career paths.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h1>About MMSF</h1>
+            <p>TWe bring to life their dream by supporting the children from rural communities who are less privileged through education empowerment and provision of right information to prevent early marriages especially among girls.
+
+
+Mirriam Mambwe Rural Scholarship Foundation is based in chanyanya village which is about 35km away from kafue town. It has been in existence for a year and has over 100 children on the program which includes provision of quality education and rural outreach programs.
+Its mission is to create a platform that pays particular attention to the inclusion of education to rural children providing them with the same opportunities as those in the city without living anyone behind.
+In 2025, we will include over 500 vulnerable rural children on the program and empower them with right information as well as equip them with the materials needed for their education to run smooth. 
+We will intensify the outreach program to ensure that the children’s wellbeing is prioritized and also school motivation which is currently running every 3 months to promote increase in awareness of a better life beyond what the eyes can see within their reach.
+</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+    <section id="donation" class="donation">
+        <div class="donation-content">
+            <h1>Make a Donation</h1>
+            <p>Your generous donations help us provide scholarships, health support, and mentorship to deserving students. Every contribution makes a difference.</p>
+            <form action="#" method="post">
+                <label for="donor-name">Name:</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+                <label for="donor-email">Email:</label>
+                <input type="email" id="donor-email" name="donor-email" required>
+                <label for="donation-amount">Donation Amount:</label>
+                <input type="number" id="donation-amount" name="donation-amount" required>
+                <button type="submit" class="ctn">Donate</button>
+            </form>
+        </div>
+    </section>
+    <section id="contacts" class="contacts">
+        <div class="contacts-content">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or need further information, please feel free to contact us.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="ctn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bottom-navbar">
+        <div class="bottom-nav-content">
+            <p>Contact us: +260971902564  &  +4407475668292
+| Email: mmrs.foundation@gmail.com | <a href="https://web.facebook.com/MMRSFoundation/?_rdc=1&_rdr#" target="_blank">Facebook</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        const bottomNavbar = document.querySelector('.bottom-navbar')
+        let lastScrollTop = 0
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+            if (scrollTop > lastScrollTop) {
+                bottomNavbar.classList.add('hidden')
+            } else {
+                bottomNavbar.classList.remove('hidden')
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+        })
+    </script>
+</body>
+</html>
